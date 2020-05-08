@@ -1,0 +1,61 @@
+<!-- # Simple examples
+
+echo Some text
+echo Some text > file.txt  (>>: overwrite) -> cat file.txt -> Some text
+
+less file -> (space: B, /.., n,...)
+
+# Arithmentic Expansion
+
+echo $((2 + 2))
+echo $(((2 + 2)*3))
+
+echo $USER
+echo $LANG
+
+# Brace Expansion
+
+echo this is the alphbet {A..Z}
+echo this is the alphbet _{A,Z}
+echo this is the alphbet _{1..5} -> touch number_{1, 3, 4}
+
+echo '$((1+2))'
+echo this cost \$10.00, echo you \& me
+echo there are many spaces     here
+echo "there are many spaces     here"
+
+mkdir -p parent/dir0
+cp file1.csv file2.csv dir1/ -> cp file?.csv dir1/ cp -a file?.csv dir1/
+ls -l file*(file1.csv file2.csv) 
+ls -l dir1/file* (file1.csv file2.csv) 
+rm -vi FILE*.txt
+head -n 15 Trump.txt tail -n 1 Trump.txt
+
+WILDCARD
+ls *.txt
+ls f*
+ls [Ff]* <==> ls [!Ff]*
+ls FILE??.txt
+ls [[:alpha:]]* ls [![:alpha:]]*
+ls [[:digit:]]* ls [![:digit:]]* lower, upper
+ls FILE[s1]*.txt (s hoặc 1 rồi ở sau)
+
+/bin - Binaries: contains programs that are essential for the system to boot and run
+ - executable, binary, essential 
+/boot - Boot Files: constains the Linux kernel, initial RAM disk image for drives need at boot time
+ - Linux kernel, initial RAM disk image, boot loader(GRUB)  /boot/grub contains grub configuration files, /boot/vmlinuz contains the Linux kernel
+/dev - device Nodes
+ - all devices represented here as files, /dev/sda1 (sda - name of a disk) USB devices, cpu etc
+
+
+HARD vs SYMBOLIC Links(về phía hệ điều hành các file được phân biệt định danh bằng chỉ số inode.)
+- ln file_name hard_link_name
+
+- ln -s file_name soft_link_name
+- ln -s folder_name soft_link_name
+
+ln file1 hardLink
+ln -s file2 softLink
+ls -l -> file1 file2 hardLink softLink -> file2
+
+-->
